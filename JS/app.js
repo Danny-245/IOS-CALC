@@ -44,12 +44,18 @@ function toggleMinus() {
     }
 }
 
+// function percentageSolve() {
+//     const value = inputBox.value;
+//     const ans = value / 100;
+//     inputBox.value = ans;
+// }
 function percentageSolve() {
     const value = inputBox.value;
-    const ans = value / 100;
+    let ansValue = eval(value);
+    const ans = ansValue / 100;
     inputBox.value = ans;
-}
 
+}
 // loader-timer
 
 function loaderExit() {
@@ -60,3 +66,4 @@ function loaderExit() {
 
 
 window.onload = setTimeout(loaderExit, 5000);
+
