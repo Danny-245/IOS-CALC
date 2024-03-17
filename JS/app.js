@@ -50,7 +50,8 @@ function toggleMinus() {
 //     inputBox.value = ans;
 // }
 function percentageSolve() {
-    const value = inputBox.value;
+    let value = inputBox.value;
+    value = value.replace(/×/g, '*');
     let ansValue = eval(value);
     const ans = ansValue / 100;
     inputBox.value = ans;
