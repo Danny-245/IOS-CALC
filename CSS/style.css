@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@300;400&family=Outfit&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     position: relative;
     background-color: #202124;
 }
+
 /* box.................................................... */
 .box {
     padding: 0 10px;
@@ -16,6 +19,7 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+
 .calc {
     width: 500px;
     height: fit-content;
@@ -23,14 +27,16 @@ body {
     border: 1px solid #ffffff96;
     border-radius: 25px;
 }
+
 .input-field {
     /* height: 120px; */
     width: 100%;
-     display: flex;
+    display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     /* padding: 0 10px; */
 }
+
 .input-field input {
     padding: 60px 25px 0 10px;
     font-size: 40px;
@@ -43,8 +49,9 @@ body {
     border: none;
     outline: none;
     color: #fff;
-   
+
 }
+
 /* button.................................................. */
 
 .buttons {
@@ -53,13 +60,14 @@ body {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .buttons button {
     border: none;
     outline: none;
     flex: 20%;
     height: 100px;
     /* padding: 10px; */
-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .rows {
@@ -68,49 +76,75 @@ border-radius: 50%;
     justify-content: center;
     padding: 10px 0;
 }
+
 button.two-col {
     flex: 45%;
     text-align: start;
     padding-left: 30px;
     border-radius: 30px;
 }
+
 @media (max-width: 550px) {
     .buttons button {
         font-size: 20px;
-        height: 60px;
-        
+        height: 85px;
+
     }
 }
-@media (max-width: 360px) {
-    .buttons button {
-        font-size: 20px;
-       
-        height: 50px;
-        
-    }
-}
+
+
+
 @media (max-width: 290px) {
     .buttons button {
         font-size: 20px;
-       
+
         height: 40px;
-        
+
     }
 }
+
 @media (max-width: 330px) {
     .buttons button {
         font-size: 20px;
-       
+
         height: 42px;
-        
+
     }
 }
-@media (max-width: 320px) {
+
+@media (max-width: 480px) {
     .buttons button {
         font-size: 20px;
-       
+
+        height: 75px;
+
+    }
+}
+
+@media (max-width: 440px) {
+    .buttons button {
+        font-size: 20px;
+
+        height: 60px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    .buttons button {
+        font-size: 18px;
+
         height: 36px;
-        
+
+    }
+}
+
+@media (max-width: 375px) {
+    .buttons button {
+        font-size: 20px;
+
+        height: 45px;
+
     }
 }
 
@@ -118,15 +152,18 @@ button.two-col {
 .li-gray {
     background-color: #a5a5a5;
 }
+
 .operators {
     background-color: #ff9f0a;
     color: #fff;
 }
+
 .dark-gray {
     background-color: #333333;
     color: #fff;
     transition: .3s;
 }
+
 #num-field::placeholder {
     color: #fff;
 }
@@ -136,37 +173,45 @@ button.two-col {
     /* background-color: #a5a5a5; */
     animation: hover .5s ease-out;
 }
+
 @keyframes hover {
     from {
         background-color: #333333;
 
     }
+
     to {
         background-color: #a5a5a5;
     }
 }
+
 .operators:focus {
     animation: opp .5s ease-out;
 }
+
 @keyframes opp {
     from {
         background-color: #ff9f0a;
-    color: #fff;
+        color: #fff;
 
     }
+
     to {
         background-color: #a5a5a5;
         color: #000;
     }
 }
+
 .li-gray:focus {
     animation: upp .5s ease-out;
 }
+
 @keyframes upp {
     from {
         background-color: #a5a5a5;
 
     }
+
     to {
         background-color: #e0e0e0;
         color: #000;
@@ -194,20 +239,23 @@ button.two-col {
     align-items: center;
     justify-content: center;
 }
+
 .loader .preload {
- width: 35px;
- height: 35px;
- border-radius: 50%;
- border: 3px solid transparent;
- /* border-right-color: #ff9f0a; */
- border-color: #ff9f0a transparent #ff9f0a transparent;
-animation: loader .9s ease infinite;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    /* border-right-color: #ff9f0a; */
+    border-color: #ff9f0a transparent #ff9f0a transparent;
+    animation: loader .9s ease infinite;
 }
+
 @keyframes loader {
     100% {
         transform: rotate(360deg);
     }
 }
+
 .loader.remove {
     display: none;
 }
