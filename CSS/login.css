@@ -84,3 +84,6 @@ justify-content: center;
 .top-text {
     font-size: 25px;
 }
+.login .signup {
+    display: none;
+}
