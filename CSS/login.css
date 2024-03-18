@@ -80,3 +80,7 @@ justify-content: center;
 .mySite {
     color: rgb(58, 98, 145);
 } 
+
+.top-text {
+    font-size: 25px;
+}
