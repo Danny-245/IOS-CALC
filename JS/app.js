@@ -66,5 +66,47 @@ function loaderExit() {
 
 
 
-window.onload = setTimeout(loaderExit, 5000);
+// window.onload = setTimeout(loaderExit, 5000);
+window.onload = setTimeout(loaderExit, 2000);
 
+
+// localStorage.clear(); 
+function profileNameAdd() {
+    let name = localStorage.getItem('UserName');
+    let firstLetter = name.charAt(0).toUpperCase();
+    // let paragraph = document.getElementsByClassName('fl');
+    document.getElementById('dp').innerText = firstLetter;
+    document.getElementById('dp2').innerText = firstLetter;
+    // paragraph.innerText = firstLetter;
+
+    let dpName = document.getElementById('name-profile');
+    dpName.innerText = name;
+    // console.log(firstLetter);
+
+}
+setTimeout(profileNameAdd, 1000);
+
+// check online status
+
+function onlineStatus() {
+    const spinnerStatus = document.getElementById('spinner-status');
+
+    if(navigator.onLine) {
+        spinnerStatus.classList.add('text-success');
+        spinnerStatus.classList.remove('text-danger');
+        document.getElementById('status').innerHTML = `<span>Online</span>`;
+    }
+    else {
+        spinnerStatus.classList.remove('text-success');
+        spinnerStatus.classList.add('text-danger');
+        document.getElementById('status').innerHTML = `<span>Offline</span>`;
+
+    }
+}
+
+setInterval(onlineStatus, 1000);
+
+function logOut() {
+    localStorage.clear();
+    window.location.href = 'index.html';
+}
