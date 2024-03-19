@@ -259,3 +259,91 @@ button.two-col {
 .loader.remove {
     display: none;
 }
+
+/* profile */
+.profile {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 20px;
+    top: 20px;
+    border: 2px solid #a5a5a554;
+    /* display: flex;
+align-items: center;
+justify-content: center; */
+    background-color: #1c347a;
+}
+
+.profile .profile-img {
+    margin: 0;
+    padding: 0;
+    line-height: 35px;
+    color: #ffffff9a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-dp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #a5a5a554;
+    background-color: #1c347a;
+}
+
+.profile-dp .profile-img {
+    line-height: 65px;
+    color: #ffffff9a;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content {
+    font-family: 'Poppins', sans-serif;
+    background-color: #202124;
+    color: #fff;
+}
+
+.flex-dir {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.data p {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    background-color: #333333;
+}
+
+.logout-btn {
+    color: #ffffff93;
+}
+
+/* .green, .red {
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+} */
+.green {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #198754;
+
+}
+
+.red {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #dc3545;
+}
+.spinner-grow {
+    width: 20px;
+    height: 20px;
+}
