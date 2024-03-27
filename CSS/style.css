@@ -323,7 +323,9 @@ hr {
 .logout-btn {
     color: #ffffff93;
 }
-
+.logout-btn.change-color {
+    background-color: #757575;
+}
 /* .green, .red {
  width: 20px;
  height: 20px;
@@ -346,4 +348,126 @@ hr {
 .spinner-grow {
     width: 20px;
     height: 20px;
+}
+.fpp .link{
+    cursor: pointer;
+}
+/* startup-css...................... */
+#startup {
+    display: none;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* background-color: #0000008c; */
+    /* background-color: #1a1a1a4b; */
+    background-color: rgba(0,0,0,0.6);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+#startup.display {
+    display: flex;
+}
+
+.spinner-container {
+    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+}
+
+.spinner-container .path {
+    stroke-dasharray: 1, 150;
+    /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+    stroke: rgb(215, 221, 230);
+    stroke-linecap: square;
+    animation: dash 1.5s ease-in-out infinite;
+    -webkit-animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -35;
+        /* 25% circumference */
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -124;
+        /* -99% circumference */
+    }
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -35;
+        /* 25% circumference */
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -124;
+        /* -99% circumference */
+    }
+}
+
+/* ........................................... */
+.checkingProfile {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.88);
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.checkingProfile.showCC{
+    display: flex;
+}
+.checkingProfile .inner-div {
+    width: 300px;
+    background-color: rgba(225,225,225,0.4);
+    padding: 5px 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.checkingProfile .inner-div .noprofile {
+    /* padding: 5px 3px; */
+    margin: 0;
+   
 }
