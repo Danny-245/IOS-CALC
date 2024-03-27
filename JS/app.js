@@ -4,29 +4,29 @@ function displayNum(num) {
     inputBox.value += num;
 }
 function evalValue() {
-let inputBox = document.getElementById("num-field");
-   try {
-    var numValue = inputBox.value;
-    numValue = numValue.replace(/×/g, '*');
-   
+    let inputBox = document.getElementById("num-field");
+    try {
+        var numValue = inputBox.value;
+        numValue = numValue.replace(/×/g, '*');
 
 
-var ans = eval(numValue);
-inputBox.value = ans;
-   }
-   catch(error) {
-    inputBox.value = 'error';
-   }
+
+        var ans = eval(numValue);
+        inputBox.value = ans;
+    }
+    catch (error) {
+        inputBox.value = 'error';
+    }
 }
 function clearValue() {
     inputBox.value = '';
-    
-  
+
+
 }
 function acvalue() {
-    if(inputBox.value !== '') {
+    if (inputBox.value !== '') {
         document.getElementById('AC').textContent = 'C';
-        
+
     }
     else {
         document.getElementById('AC').textContent = 'AC';
@@ -36,7 +36,7 @@ setInterval(acvalue, 500);
 
 function toggleMinus() {
     let value = inputBox.value;
-    if(value.charAt(0) === '-') {
+    if (value.charAt(0) === '-') {
         inputBox.value = value.substring(1);
     }
     else {
@@ -91,7 +91,7 @@ setTimeout(profileNameAdd, 1000);
 function onlineStatus() {
     const spinnerStatus = document.getElementById('spinner-status');
 
-    if(navigator.onLine) {
+    if (navigator.onLine) {
         spinnerStatus.classList.add('text-success');
         spinnerStatus.classList.remove('text-danger');
         document.getElementById('status').innerHTML = `<span>Online</span>`;
@@ -107,6 +107,65 @@ function onlineStatus() {
 setInterval(onlineStatus, 1000);
 
 function logOut() {
+    var logOutBtn = document.getElementById('logout-btn');
+    logOutBtn.textContent = 'Loging out...';
+    setTimeout(function changetwo() {
+        logOutBtn.textContent = 'Clearing data...';
+    }, 2000)
+    setTimeout(function changetwo() {
+        logOutBtn.textContent = 'Deleting Profile...';
+    }, 3000)
+
+
+    setTimeout(function changetwo() {
+        logOutBtn.textContent = 'Redirecting...';
+        logOutBtn.classList.remove('bg-danger');
+        logOutBtn.classList.add('change-color');
+        // logOutBtn.style.background = '#333';
+    }, 6500);
+
+
+    setTimeout(modalLogout, 1000);
     localStorage.clear();
-    window.location.href = 'index.html';
+    function redirect() {
+        window.location.href = 'index.html';
+
+    }
+    setTimeout(redirect, 9000);
 }
+
+// functio to show logout modal 
+function modalLogout() {
+    const modal = document.getElementById('startup');
+    modal.classList.add('display');
+
+}
+
+// function to check if user has already logged-in
+
+
+
+
+// function redirectUser() {
+
+// }
+// document.addEventListener('DOMContentLoaded', 
+
+// document.addEventListener('onload', ()=> {
+
+// })
+window.addEventListener('DOMContentLoaded', (e) => {
+    if (localStorage.getItem('UserName')) {
+        e.preventDefault();
+    }
+    else {
+
+        let checkProfile = document.getElementById('checkP');
+        checkProfile.classList.add('showCC');
+setTimeout(function redd() {
+    window.location.href = 'index.html';
+
+}, 6500);
+
+    }
+})
