@@ -126,9 +126,9 @@ function logOut() {
 
 
     setTimeout(modalLogout, 1000);
-    localStorage.clear();
+    
     function redirect() {
-        window.location.href = 'index.html';
+        window.history.back();
 
     }
     setTimeout(redirect, 9000);
