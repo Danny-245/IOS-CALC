@@ -131,12 +131,52 @@ resetForm.addEventListener('submit', (e) => {
     else {
         e.preventDefault();
         errorReset.textContent = '';
+
         let newPassword = resetPswd.value;
         localStorage.setItem('password-signup', newPassword);
         signUp.style.display = 'none';
         login.style.display = 'block';
-      
+      alert();
         reset.style.display = 'none';
     }
 
 });
+
+function alert() {
+    iziToast.success({
+        id: 'success',
+        title: 'Success',
+     message: 'Password reset successfully !',
+     position: 'topRight',
+    //  transitionOut: 'fadeOutUp'
+ })
+}
+
+// $(document).ready(function(){
+//     iziToast.success({
+//         title: 'Success',
+//         message: 'You on the way !'
+//     })
+// });
+iziToast.settings({
+    timeout: 5000,
+    resetOnHover: true,
+    transitionIn: 'flipInX',
+    transitionOut: 'flipOutX',
+    onOpening: function(){
+        console.log('callback abriu!');
+    },
+    onClosing: function(){
+        console.log("callback fechou!");
+    }
+});
+      
+
+// document.addEventListener('DOMContentLoaded', ()=> {
+//     iziToast.success({
+//         title: 'Success',
+//      message: 'You on the way !',
+//      position: 'topRight',
+//      transitionOut: 'fadeOutUp'
+//  })
+// })
